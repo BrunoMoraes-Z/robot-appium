@@ -17,8 +17,9 @@ jobs:
       
       - run: sdkmanager platform-tools
       
-      - run: avdmanager create avd -n Android28 -k "system-images;android-28;google_apis;x86"
-      
+      - name: "Run UI Tests"
+        uses: vgaidarji/android-github-actions-emulator@v1.0.1
+
       - run: adb devices
       
       - run: echo $ANDROID_HOME
