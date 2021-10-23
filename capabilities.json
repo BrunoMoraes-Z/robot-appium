@@ -1,0 +1,7 @@
+{
+    "platformName": "Android",
+    "deviceName": "emulator-5554",
+    "appPackage": "com.google.android.youtube",
+    "appActivity": "com.google.android.apps.youtube.app.WatchWhileActivity",
+    "autoGrantPermissions": true
+}
