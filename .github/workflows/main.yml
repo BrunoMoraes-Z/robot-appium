@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Setup Python
+        uses: actions/setup-python@v2.2.2
+        
+      - uses: malinskiy/action-android/install-sdk@release/0.1.2
+      
+      - run: sdkmanager platform-tools
+      
+      - run: adb devices
+      
+      - run: echo $ANDROID_HOME
