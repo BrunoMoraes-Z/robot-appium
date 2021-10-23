@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -13,12 +13,11 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2.2.2
         
-      #- uses: malinskiy/action-android/install-sdk@release/0.1.2
+      - uses: malinskiy/action-android/install-sdk@release/0.1.2
       
-      #- run: sdkmanager platform-tools
+      - run: sdkmanager platform-tools
       
-      - name: "Run UI Tests"
-        uses: vgaidarji/android-github-actions-emulator@v1.0.1
+      - run: avdmanager create avd --force -n test -t android-29
 
       - run: adb devices
       
