@@ -17,7 +17,7 @@ jobs:
       
       - run: sdkmanager platform-tools
       
-      - run: avdmanager create avd --force --name testAVD --abi google_apis/x86_64 --package 'system-images;android-23;google_apis;x86_64'
+      - run: avdmanager create avd --force --name Nexus6P --abi google_apis/x86_64 --package 'system-images;android-23;google_apis;x86_64' --device "Nexus 6P"
 
       - run: adb devices
       
