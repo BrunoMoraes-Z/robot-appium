@@ -17,9 +17,7 @@ jobs:
       
       - run: sdkmanager platform-tools
       
-      - uses: malinskiy/action-android/emulator-run-cmd@release/0.1.2
-        with:
-          api: 30
+      - run: avdmanager create avd -n Android28 -k "system-images;android-28;google_apis;x86"
       
       - run: adb devices
       
