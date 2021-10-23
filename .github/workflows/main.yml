@@ -17,7 +17,7 @@ jobs:
       
       - run: sdkmanager platform-tools
       
-      - run: avdmanager create avd --force -n test --package 'system-images;android-19;google_apis;x86'
+      - run: avdmanager create avd --force --name testAVD --abi google_apis/x86_64 --package 'system-images;android-23;google_apis;x86_64'
 
       - run: adb devices
       
